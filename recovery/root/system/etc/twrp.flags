@@ -8,7 +8,7 @@
 # Physical partitions - Data
 /optics			ext4		/dev/block/by-name/optics							flags=display="Optics"
 /prism			ext4		/dev/block/by-name/prism							flags=display="Prism"
-/metadata		ext4		/dev/block/platform/bootdevice/by-name/md_udc		flags=display="Metadata";wipeingui;wipeduringfactoryreset
+/metadata		ext4		/dev/block/platform/bootdevice/by-name/metadata		flags=display="Metadata";wipeingui;wipeduringfactoryreset
 /data			f2fs		/dev/block/by-name/userdata							flags=length=-16384;fileencryption=aes-256-xts:aes-256-cts:v1
 /cache          ext4      	/dev/block/platform/bootdevice/by-name/cache      	flags=display="Cache";wipeingui;wipeduringfactoryreset
 
