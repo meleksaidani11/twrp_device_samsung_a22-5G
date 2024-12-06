@@ -23,13 +23,6 @@ PRODUCT_TARGET_VNDK_VERSION := 33
 PRODUCT_SHIPPING_API_LEVEL := 31
 
 
-# A/B
-ENABLE_VIRTUAL_AB := true
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
-    FILESYSTEM_TYPE_system=ext4 \
-    POSTINSTALL_OPTIONAL_system=true
 
 # Boot control HAL
 
