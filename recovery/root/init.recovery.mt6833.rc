@@ -23,6 +23,11 @@ on boot
     setprop ro.boot.vbmeta.avb_version 1.1
     setprop ro.boot.avb_version 1.1
 
+on fs
+    wait /dev/block/platform/12100000.dwmmc0
+    symlink /dev/block/platform/12100000.dwmmc0 /dev/block/bootdevice
+    symlink /dev/block/platform/12100000.dwmmc0/by-name /dev/block/by-name
+
 on post-fs
     # Support A/B feature for EMMC and UFS boot region
     wait /dev/block/mmcblk0boot0 2
